@@ -1,0 +1,144 @@
+.recent-news {
+	@include adaptiv-value('padding-bottom', 120, 50, 1);
+	background-color: var(--color-white);
+
+	&__container {
+	}
+
+	&__title {
+		@include adaptiv-value('margin-bottom', 60, 20, 1);
+		margin: 0;
+		font-weight: 700;
+		@include adaptiv-value('font-size', 46, 24, 1);
+		line-height: 130%;
+		padding-left: 240px;
+		@media (max-width: 1100px) {
+			text-align: center;
+			padding: 0;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(2, 255px);
+		gap: 30px;
+		@include adaptiv-value('margin-bottom', 80, 30, 1);
+	}
+
+	&__item {
+		grid-column: 5 span;
+
+		&:first-child {
+			grid-column: 7 span;
+			grid-row: 2 span;
+		}
+		@media (max-width: 1100px) {
+			grid-column: 12 span;
+			justify-content: center;
+			&:first-child {
+				grid-column: 12 span;
+			}
+		}
+	}
+}
+
+.news-article {
+	overflow: hidden;
+	border-radius: 4px;
+	height: 100%;
+	box-shadow: var(--main-shadow);
+	background-color: var(--color-white);
+	@media (max-width: 1100px) {
+		display: grid;
+		justify-content: center;
+	}
+
+	&__text {
+		padding: 20px 24px;
+		@media (max-width: 1100px) {
+			padding: 20px 15px;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 13px;
+	}
+
+	&__descr {
+		margin: 0;
+		@include adaptiv-value('font-size', 16, 14, 1);
+		line-height: 160%;
+		color: var(--color-darkGray);
+		@media (max-width: 1100px) {
+			max-width: 705px;
+		}
+		@media (max-width: $md3+px) {
+			max-width: 100%;
+		}
+	}
+
+	&__meta {
+		margin-bottom: 17px;
+	}
+
+	&__link {
+		font-weight: 700;
+		@include adaptiv-value('font-size', 20, 16, 1);
+		line-height: 150%;
+		color: #1e212c;
+		transition: color 0.3s ease 0s;
+		&:hover {
+			color: var(--color-orange);
+		}
+	}
+
+	&--small {
+		.recent-article__descr {
+			display: none;
+		}
+
+		.recent-article__text {
+			padding: 12px 24px;
+		}
+
+		.recent-article__title {
+			margin-bottom: 9px;
+		}
+	}
+}
+
+.article-meta {
+	@include adaptiv-value('font-size', 14, 12, 1);
+	line-height: 150%;
+	color: var(--color-gray);
+
+	&__item {
+		position: relative;
+		color: inherit;
+
+		&:not(:last-child) {
+			margin-right: 21px;
+
+			&::after {
+				content: '';
+				position: absolute;
+				right: -13px;
+				top: 2px;
+				width: 1px;
+				height: 11px;
+				color: inherit;
+				background-color: currentColor;
+			}
+		}
+
+		&--comments {
+			padding-left: 24px;
+			background-image: url('../img/icons/comments.svg');
+			background-position: left center;
+			background-size: 16px 16px;
+			background-repeat: no-repeat;
+		}
+	}
+}

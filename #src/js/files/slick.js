@@ -1,0 +1,30 @@
+//=====================================
+$(document).ready(function () {
+	$('.slider__body').slick({
+		arrows: true,
+		dots: true,
+		adaptiveHeight: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		speed: 1500,
+		easing: 'ease',
+		infinite: true,
+		initialSlide: 0,
+		autoplay: false,
+		autoplaySpeed: 2000,
+		pauseOnFocus: true,
+		pauseOnHover: true,
+		pauseOnDotsHover: true,
+		draggable: true,
+		swipe: true,
+		touchThreshold: 10,
+		touchMove: true,
+		waitForAnimate: false,
+		centerMode: false,
+		variableWidth: false,
+		rows: 1,
+		slidesPerRow: 1,
+		vertical: false,
+		verticalSwiping: false,
+	});
+});
