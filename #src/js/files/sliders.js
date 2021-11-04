@@ -145,7 +145,7 @@ if (document.querySelector('.projects__body')) {
 				// autoHeight: false,
 			},
 			992: {
-				// slidesPerView: 3,
+				slidesPerView: 3,
 				// spaceBetween: 20,
 			},
 			1268: {

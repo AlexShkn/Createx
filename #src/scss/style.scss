@@ -83,13 +83,16 @@ body {
 @import './components/statistic';
 @import './components/recent-news';
 @import './components/feedback';
-@import './components/services-inner';
+@import './components/services-range';
+@import './components/interior-offer';
+@import './components/pricing';
 
 //===========MAIN===============================================
 @import './components/footer';
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>==============
-@import './parts/popup';
-@import './parts/home';
+@import './parts/accordion';
+// @import './parts/popup';
+// @import './parts/home';
 //@import "datepicker";
 //@import "lightgallery";
 //@import "pagging";

@@ -47,6 +47,12 @@
 	&__view {
 	}
 }
+
+.interiror-projects {
+	@include adaptiv-value('padding-top', 180, 40, 1);
+	@include adaptiv-value('padding-bottom', 100, 40, 1);
+	background-color: var(--color-white);
+}
 .slider-projects {
 	// .slider-projects__controls
 
@@ -95,6 +101,8 @@
 	// .item-projects__image
 
 	&__image {
+		min-height: 345px;
+		max-width: 390px;
 	}
 
 	// .item-projects__descr

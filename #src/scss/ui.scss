@@ -73,16 +73,15 @@
 }
 
 .title {
-	@include adaptiv-value('margin-bottom', 24, 15, 1);
 	font-weight: 700;
 	@include adaptiv-value('font-size', 46, 24, 1);
 	line-height: 130%;
 }
 .subtitle {
-	@include adaptiv-value('margin-bottom', 20, 10, 1);
+	@include adaptiv-value('margin-bottom', 60, 20, 1);
 	@include adaptiv-value('font-size', 18, 16, 1);
 	line-height: 150%;
-	color: #787a80;
+	color: var(--color-gray);
 }
 
 // .swiper-pagination-bullets {

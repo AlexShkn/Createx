@@ -1,0 +1,125 @@
+.services-range {
+	@include adaptiv-value('padding-top', 120, 50, 1);
+	@include adaptiv-value('padding-bottom', 180, 50, 1);
+	// .services-range__container
+
+	&__container {
+	}
+
+	// .services-range__rows
+
+	&__rows {
+	}
+}
+.range-rows {
+	// .range-rows__item
+
+	&__item {
+		flex: 1 1 100%;
+		display: flex;
+		@media (max-width: 870px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&:not(:last-child) {
+			@include adaptiv-value('margin-bottom', 120, 60, 1);
+		}
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+		}
+	}
+
+	// .range-rows__block
+
+	&__block {
+		width: 100%;
+		@media (max-width: 870px) {
+			text-align: center;
+		}
+	}
+
+	// .range-rows__image
+
+	&__image {
+		@media (max-width: $md2+px) {
+			@include adaptiv-value('max-width', 500, 300, 1);
+		}
+		@media (max-width: 870px) {
+			max-width: 500px;
+		}
+		@media (max-width: 540px) {
+			width: 100%;
+		}
+	}
+
+	// .range-rows__content
+
+	&__content {
+		@include adaptiv-value('padding-top', 75, 20, 1);
+		&_pl {
+			@include adaptiv-value('padding-left', 65, 20, 1);
+		}
+		&_pr {
+			@include adaptiv-value('padding-right', 65, 20, 1);
+		}
+		@media (max-width: $md2+px) {
+			padding-top: 10px;
+		}
+		@media (max-width: 870px) {
+			padding-top: 20px;
+			&_pl {
+				padding-left: 0;
+			}
+			&_pl {
+				padding-left: 0;
+			}
+		}
+	}
+
+	// .range-rows__body
+
+	&__body {
+		padding: 0 15px;
+	}
+
+	// .range-rows__title
+
+	&__title {
+		font-weight: 700;
+		@include adaptiv-value('font-size', 32, 26, 1);
+		line-height: 150%;
+		@include adaptiv-value('margin-bottom', 24, 10, 0);
+	}
+
+	// .range-rows__text
+
+	&__text {
+		@include adaptiv-value('margin-bottom', 48, 30, 1);
+		@include adaptiv-value('font-size', 16, 14, 1);
+		line-height: 160%;
+		color: var(--color-gray);
+		@media (max-width: 870px) {
+			max-width: 600px;
+		}
+	}
+
+	// .range-rows__button
+
+	&__button {
+		padding: 13px 31px;
+		height: 44px;
+		border: 1px solid var(--color-orange);
+		border-radius: 4px;
+		font-weight: 700;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		color: var(--color-orange);
+		transition: all 0.3s ease 0s;
+		&:hover {
+			background-color: var(--color-orange);
+			color: var(--color-white);
+		}
+	}
+}

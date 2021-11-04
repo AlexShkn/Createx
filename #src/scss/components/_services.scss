@@ -30,11 +30,13 @@
 	// .services__title
 
 	&__title {
+		@include adaptiv-value('margin-bottom', 24, 15, 1);
 	}
 
 	// .services__subtitle
 
 	&__subtitle {
+		@include adaptiv-value('margin-bottom', 60, 20, 1);
 	}
 
 	// .services__content

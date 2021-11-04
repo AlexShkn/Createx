@@ -15,3 +15,14 @@ window.onload = function () {
 	const headerObserver = new IntersectionObserver(callback);
 	headerObserver.observe(headerElement);
 };
+
+// // Accordion
+// if (document.querySelector('.offer')) {
+// 	const accordion1 = new CustomAccordion('.accordion-1', {
+// 		speed: 300,
+// 	});
+
+// 	const accordion2 = new CustomAccordion('.accordion-2', {
+// 		speed: 300,
+// 	});
+// }

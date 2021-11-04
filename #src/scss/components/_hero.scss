@@ -23,11 +23,15 @@
 
 	&__title {
 		margin-bottom: 24px;
+		max-width: 600px;
 		font-weight: 700;
 		@include adaptiv-value('font-size', 72, 55, 1);
 		line-height: 130%;
 		letter-spacing: 1px;
 		text-transform: uppercase;
+		@media (max-width: 1015px) {
+			max-width: 500px;
+		}
 	}
 
 	// .hero__descr
@@ -82,9 +86,6 @@
 		}
 		.return__link {
 			font-weight: 700;
-		}
-		.return__link-current {
-			color: #58585a;
 		}
 	}
 }
