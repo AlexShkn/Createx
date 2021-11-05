@@ -28,17 +28,8 @@
 .benefits {
 	position: relative;
 	@include adaptiv-value('padding-top', 80, 40, 1);
-	@include adaptiv-value('padding-bottom', 125, 40, 1);
+	// @include adaptiv-value('padding-bottom', 125, 40, 1);
 	background: #1e212c;
-	// .benefits__container
-
-	&__container {
-	}
-
-	// .benefits__heading
-
-	&__heading {
-	}
 
 	// .benefits__title
 
@@ -59,15 +50,14 @@
 	// .benefits__button
 
 	&__button {
+		width: 100%;
+		text-align: center;
 	}
 
 	// .benefits__btn
 
 	&__btn {
-		position: relative;
-		@include adaptiv-value('bottom', -150, -65, 1);
-		left: 50%;
-		transform: translate(-50%, 0px);
+		transform: translateY(25px);
 		display: inline-flex;
 		align-items: center;
 		text-align: center;
@@ -262,11 +252,6 @@
 		flex-wrap: wrap;
 		@include adaptiv-value('padding-right', 60, 10, 0);
 		@include adaptiv-value('padding-left', 60, 10, 0);
-	}
-
-	// .values-form__field
-
-	&__field {
 	}
 
 	// .values-form__btn

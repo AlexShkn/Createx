@@ -1,5 +1,6 @@
 .footer {
-	padding: 80px 0;
+	@include adaptiv-value('padding-top', 80, 50, 1);
+	@include adaptiv-value('padding-bottom', 80, 50, 1);
 	color: rgba(255, 255, 255, 0.6);
 	background-color: #1e212c;
 
@@ -15,12 +16,18 @@
 
 	&__left {
 		grid-column: 7 span;
+		@media (max-width: 890px) {
+			grid-column: 12 span;
+		}
 	}
 
 	// .footer__logo
 
 	&__logo {
 		margin-right: 60px;
+		@media (max-width: 550px) {
+			margin-bottom: 20px;
+		}
 	}
 
 	// .footer__top
@@ -29,6 +36,10 @@
 		display: flex;
 		align-items: center;
 		margin-bottom: 22px;
+		@media (max-width: 550px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 
 	// .footer__descr
@@ -39,24 +50,39 @@
 		max-width: 495px;
 		font-size: 14px;
 		line-height: 150%;
+		@media (max-width: 890px) {
+			max-width: 550px;
+		}
+		@media (max-width: 370px) {
+			max-width: 300px;
+		}
 	}
 
 	// .footer__form
 
 	&__form {
 		grid-column: 5 span;
+		@media (max-width: 890px) {
+			grid-column: 12 span;
+		}
 	}
 
 	// .footer__address
 
 	&__address {
 		grid-column: 4 span;
+		@media (max-width: 560px) {
+			grid-column: 10 span;
+		}
 	}
 
 	// .footer__nav
 
 	&__nav {
 		grid-column: 8 span;
+		@media (max-width: 560px) {
+			grid-column: 12 span;
+		}
 	}
 
 	// .footer__copyright
@@ -96,6 +122,9 @@
 		display: flex;
 		align-items: center;
 		margin-bottom: 15px;
+		@media (max-width: 360px) {
+			margin-right: 40px;
+		}
 	}
 
 	// .footer-form__descr
@@ -134,7 +163,11 @@
 		}
 
 		a {
+			transition: all 0.3s ease 0s;
 			color: inherit;
+			&:hover {
+				color: var(--color-orange);
+			}
 		}
 	}
 
@@ -149,12 +182,24 @@
 	display: flex;
 	padding-top: 20px;
 	padding-left: 54px;
+	@media (max-width: $md3+px) {
+		@include adaptiv-value('padding-left', 54, 20, 1);
+	}
+	@media (max-width: 560px) {
+		padding-left: 0;
+	}
+	// @media (max-width: 330px) {
+	// 	flex-direction: column;
+	// }
 
 	// .footer-nav__col
 
 	&__col {
 		&:not(:last-child) {
-			margin-right: 125px;
+			@include adaptiv-value('margin-right', 125, 50, 1);
+			// @media (max-width: $md3+px) {
+			// 	margin-right: 50px;
+			// }
 		}
 	}
 
@@ -172,6 +217,10 @@
 		font-size: 16px;
 		line-height: 160%;
 		color: inherit;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			color: var(--color-orange);
+		}
 	}
 }
 
@@ -201,6 +250,10 @@
 			fill: var(--color-white);
 			object-fit: cover;
 			opacity: 0.6;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				fill: var(--color-orange);
+			}
 		}
 	}
 }

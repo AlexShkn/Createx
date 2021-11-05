@@ -1,9 +1,8 @@
 .statistic {
 	position: relative;
-	top: -60px;
 	overflow: hidden;
-	@include adaptiv-value('padding-top', 240, 50, 1);
-	@include adaptiv-value('padding-bottom', 100, 10, 1);
+	@include adaptiv-value('padding-top', 240, 100, 1);
+	@include adaptiv-value('padding-bottom', 187, 100, 1);
 	background-color: var(--color-white);
 	z-index: 3;
 	@media (max-width: 460px) {
@@ -21,6 +20,7 @@
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+		z-index: -1;
 	}
 
 	&__list {

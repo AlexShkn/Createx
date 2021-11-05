@@ -40,6 +40,24 @@
 	// .projects__item
 
 	&__item {
+		@media (any-hover: hover) {
+			&:hover {
+				.item-projects__descr {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					left: 0;
+					height: 163px;
+
+					.item-projects__btn {
+						visibility: visible;
+					}
+					.item-projects__subtitle {
+						padding-bottom: 24px;
+					}
+				}
+			}
+		}
 	}
 
 	// .projects__view
@@ -102,7 +120,6 @@
 
 	&__image {
 		min-height: 345px;
-		max-width: 390px;
 	}
 
 	// .item-projects__descr
@@ -113,21 +130,6 @@
 		height: 95px;
 		background-color: var(--color-white);
 		transition: background-color 0.3s ease 0s;
-		&:hover {
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			left: 0;
-			height: 163px;
-
-			.item-projects__btn {
-				visibility: visible;
-			}
-			.item-projects__subtitle {
-				padding-bottom: 24px;
-			}
-		}
-
 		@media (max-width: $md3+px) {
 			position: absolute;
 			bottom: 0;

@@ -9,23 +9,21 @@
 		text-align: center;
 		@include adaptiv-value('padding-bottom', 60, 20, 1);
 	}
-
-	// .partners__brands
-
-	&__brands {
-	}
-
-	// .partners__reviews
-
-	&__reviews {
-	}
 }
 
+.reviews-partners__wrapper {
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: 991px) {
+		display: block;
+	}
+}
 .reviews-partners {
 	position: relative;
-	// flex: 1 1 auto;
+	flex: 1 1 auto;
 	display: flex;
 	@include adaptiv-value('padding-top', 170, 50, 1);
+	background: #f4f5f7;
 
 	@media (max-width: 1150px) {
 		flex-direction: column;
@@ -35,9 +33,10 @@
 
 	&__items {
 		flex: 0 1 50%;
-		@media (max-width: 1150px) {
+		@media (max-width: 991px) {
 			flex: 1 1 100%;
 			display: flex;
+			flex-wrap: wrap;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
@@ -45,10 +44,10 @@
 		}
 
 		&_left {
-			position: relative;
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
+			// position: relative;
+			// display: flex;
+			// flex-direction: column;
+			// justify-content: flex-start;
 		}
 
 		// .reviews-partners__left
@@ -56,16 +55,16 @@
 		&_right {
 			display: flex;
 			justify-content: flex-end;
-			@media (max-width: 460px) {
-				display: none;
+			margin-left: 135px;
+			@media (max-width: 991px) {
+				justify-content: center;
+				margin-left: 0;
 			}
 		}
 	}
 	&__block-image {
-		max-width: 495px;
-		@media (max-width: 1150px) {
-			width: 100%;
-		}
+		width: 100%;
+		margin-bottom: -60px;
 	}
 
 	// .reviews-partners__image
@@ -74,7 +73,7 @@
 		position: relative;
 		z-index: 4;
 		width: 100%;
-		height: 550px;
+		max-height: 550px;
 	}
 }
 .reviews {
@@ -89,11 +88,6 @@
 		@include adaptiv-value('font-size', 46, 20, 1);
 		@include adaptiv-value('padding-bottom', 60, 30, 1);
 	}
-
-	// .reviews__slider
-
-	&__slider {
-	}
 }
 .reviews-slider {
 	position: relative;
@@ -101,16 +95,6 @@
 	// @media (max-width: 650px) {
 	// 	width: 200px;
 	// }
-
-	// .reviews-slider__body
-
-	&__body {
-	}
-
-	// .reviews-slider__item
-
-	&__item {
-	}
 
 	// .reviews-slider__avatar
 

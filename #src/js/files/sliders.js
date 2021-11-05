@@ -149,7 +149,7 @@ if (document.querySelector('.projects__body')) {
 				// spaceBetween: 20,
 			},
 			1268: {
-				// slidesPerView: 4,
+				slidesPerView: 3,
 				// spaceBetween: 30,
 			},
 		},

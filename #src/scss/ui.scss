@@ -50,7 +50,10 @@
 	// .view-projects__title
 
 	&__title {
-		@include adaptiv-value('padding-right', 40, 20, 1);
+		@include adaptiv-value('padding-right', 40, 18, 1);
+		@media (max-width: 580px) {
+			padding-right: 0;
+		}
 	}
 
 	// .view-projects__button
