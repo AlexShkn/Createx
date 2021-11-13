@@ -1,6 +1,9 @@
 .services-hero {
 	background-image: url('../img/services-hero-bg.png');
 }
+.work-hero {
+	background-image: url('../img/work-hero-bg.png');
+}
 .hero {
 	@include adaptiv-value('padding-top', 153, 75, 1);
 	padding-bottom: 80px;

@@ -1,3 +1,12 @@
+.partners-work {
+	@include adaptiv-value('padding-top', 180, 30, 1);
+	@include adaptiv-value('padding-bottom', 120, 50, 1);
+
+	&__title {
+		text-align: center;
+		@include adaptiv-value('padding-bottom', 60, 20, 1);
+	}
+}
 .partners {
 	@include adaptiv-value('padding-top', 80, 30, 1);
 	@include adaptiv-value('padding-bottom', 120, 50, 1);
@@ -44,10 +53,6 @@
 		}
 
 		&_left {
-			// position: relative;
-			// display: flex;
-			// flex-direction: column;
-			// justify-content: flex-start;
 		}
 
 		// .reviews-partners__left
